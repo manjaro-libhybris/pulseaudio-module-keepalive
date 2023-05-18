@@ -1,0 +1,13 @@
+From: Bardia Moshiri <fakeshell@bardia.tech>
+diff -Npur a/meson.build b/meson.build
+--- a/meson.build	2023-05-16 23:42:18.058913508 +0300
++++ b/meson.build	2023-05-16 23:41:54.409111178 +0300
+@@ -23,7 +23,7 @@ pa_version_str = meson.project_version()
+ version_split = pa_version_str.split('-')[0].split('.')
+ pa_version_major = version_split[0].split('v')[0]
+ pa_version_minor = version_split[1]
+-pa_version_module = version_split[2].split('+')[0]
++pa_version_module = 24
+ pa_version_major_minor = pa_version_major + '.' + pa_version_minor
+ 
+ pa_c_args = ['-DHAVE_CONFIG_H', '-DPULSEAUDIO_VERSION=' + pa_version_major]
